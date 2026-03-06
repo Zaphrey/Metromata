@@ -1,0 +1,26 @@
+<div class="marker" style="width: 300px;">
+    <div class="header">
+        <span class="material-symbols-sharp">bus_map_pin</span>
+        <span class="ms-2">{{ stop?.stop_name_short }}</span>
+    </div>
+    <hr class="m-1">
+    @if (!stopTimes) {
+        <p>Loading arrival times...</p>
+    }
+    @else {
+        <ul>
+            <p class="m-0 list-item">
+                <span class="material-symbols-sharp">nest_clock_farsight_analog</span>
+                <span class="ms-2">Next arrivals</span>
+            </p>
+            @for (stopRoute of routes; track stopRoute.trip_id) {
+                <hr class="m-1">
+                <li class="list-item">
+                    <span class="material-symbols-sharp">directions_bus</span>
+                    <span class="ms-2">{{ stopRoute.route.route_long_name }}</span>
+                    <span class="badge bg-dark list-item ms-2 rounded-pill p-1"><span class="material-symbols-sharp fs-5">nest_clock_farsight_analog</span><span class="ms-1 me-1">{{ stopRoute.converted_time }}</span></span>
+                </li>
+            }
+        </ul>
+    }
+</div>

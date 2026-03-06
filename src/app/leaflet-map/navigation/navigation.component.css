@@ -1,0 +1,11 @@
+.nav-sidebar {
+    overflow-y: auto;
+    height: 100%;
+    min-height: 0;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

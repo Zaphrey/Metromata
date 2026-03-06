@@ -1,0 +1,13 @@
+<div class="marker" style="width: 250px;">
+    <div class="header">
+        <span class="material-symbols-sharp">directions_bus</span>
+        <span class="me-1 ms-2"> {{ vehicle?.vehicle?.vehicle?.label }}</span>
+        <span class="me-1"> Route {{ route?.route_short_name }} </span>
+        <a href="{{ route?.route_url }}" target="_blank" class="ms-2">{{ route?.route_long_name }}</a>
+    </div>
+    <hr class="m-1">
+    <span class="list-item">
+        <span class="material-symbols-sharp">airline_seat_recline_normal</span>
+        <span class="ms-2">{{ (vehicle?.vehicle?.occupancyStatus ?? -1) | occupancyStatus }}</span>
+    </span>
+</div>

@@ -1,0 +1,26 @@
+.list-item {
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.list-item p {
+    margin: 0px;
+}
+
+.marker {
+    padding: 0px;
+}
+
+.marker ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

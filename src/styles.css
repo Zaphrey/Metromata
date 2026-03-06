@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+.icon-glpyh-stroke {
+    font-size: 48px;
+    /* color: #373869; */
+
+    -webkit-text-stroke: 2px black;
+    -webkit-text-stroke-width: 1px;
+}
+
+.bus {
+    color: white;
+}
+
+.stop {
+    font-size: 32px;
+    color: rgb(255, 207, 105);
+}
+
+/* .bus-large {
+    font-size: 64px;
+    /* color: #373869;
+    transition: font-size 0.5s ease-in-out; */
+    
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}

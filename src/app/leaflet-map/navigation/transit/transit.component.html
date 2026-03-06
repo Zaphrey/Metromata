@@ -1,0 +1,16 @@
+<div style="overflow: auto; max-height: 600px;">
+    @for (vehicle of vehicles; track vehicle.id) {
+        <div class="card" #navItem [attr.data-stop]="vehicle.id">
+            <div class="card-heading">
+                <a class="btn btn-outline-dark w-100 text-start bus-nav" [routerLink]="['/transit', vehicle.id]"
+                    [class.active]="selectedVehicle == vehicle.id"
+                    data-bs-toggle="dropdown" aria-expanded="false"
+                    (click)="selectVehicle(vehicle.id!)">
+                    <span class="material-symbols-sharp">directions_bus</span>
+                    <span>{{ vehicle.route_name }} - {{ vehicle.vehicle?.vehicle?.label }}</span>
+                </a>
+            </div>
+        </div>
+        <hr class="m-1">
+    }
+</div>

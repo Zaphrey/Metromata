@@ -1,0 +1,9 @@
+<div class="container-fluid p-0 m-0" style="overflow: auto; max-height: 600px;">
+    @for (item of stops; track item[0]) {
+    <div #navItem [attr.data-stop]="item[0]">
+        <app-street-dropdown [streetName]="item[0].trim()" [stops]="item[1]" [activeStreet]="selectedStreet"
+            [activeStop]="selectedStop" />
+    </div>
+    <hr class="m-1">
+    }
+</div>

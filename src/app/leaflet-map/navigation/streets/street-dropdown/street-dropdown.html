@@ -1,0 +1,23 @@
+<div class="card border-dark rounded-3">
+    <div class="card-heading">
+        <a class="btn btn-outline-dark w-100 text-start bus-nav rounded-2" [routerLink]="['/street', streetName]" data-bs-toggle="dropdown" aria-expanded="false"
+        (click)="onDropdownClicked()">
+            <span class="material-symbols-sharp">bus_map_pin</span>
+            <span>{{ streetName }}</span>
+        </a>
+    </div>
+    
+    @if (activeStreet == streetName) {
+        <div class="card-body p-1">
+            @for (stop of stops; track $index) {
+                <a class="text-truncate btn btn-outline-dark w-100 text-start" 
+                [class.mt-1]="$index > 0" 
+                [class.active] = "stop.stop_id == activeStop"
+                [routerLink]="['/street', streetName, stop.stop_id]"
+                (click)="onStopSelected(stop)">
+                    {{ stop.stop_name_short }}
+                </a>
+            }
+        </div>
+    }
+</div>

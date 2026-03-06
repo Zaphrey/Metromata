@@ -1,0 +1,16 @@
+<div class="container-fluid card">
+    <div class="mt-2">
+        <label for="legend-select" class="m-2"><span class="material-symbols-sharp">map</span><span>Legend Selection</span></label>
+        <div class="row m-2">
+            <select name="legend-select" id="1" [value]="route ?? '/street'" class="form-control" #legendSelect
+                (change)="onLegendChange($event)">
+                <option value="/transit">Vehicles</option>
+                <option value="/street">Stops</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="m-2">
+        <router-outlet />
+    </div>
+</div>
