@@ -1,59 +1,55 @@
 # Metromata
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.4.
+This is a project I made to learn about Geographical Information Systems along with enhancing my skills in other technologies such as Angular. It's a real time bus tracking application which focuses on transit in the city of Atlanta, Georgia. It uses Leaflet to render the map with map tiles provided by OpenStreetMap, along with Angular to handle state changes and frontend interactions. The name was inspired by Conway's game of life, which uses cellular automata. I thought of all the moving vehicles moving in a similar way, and played with the word to achieve Metromata.
 
-## Development server
+## Instructions for Build and Use
 
-To start a local development server, run:
+[Metromata Video Demonstration](https://youtu.be/MQibOBoALNg)
 
-```bash
-ng serve
-```
+Steps to build and/or run the software:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+1. Ensure the Node Package Manager (npm) is installed on the device. It can be installed from the [Node.js](https://nodejs.org/en) website.
+2. Download the latest release from [GitHub](https://github.com/Zaphrey/Metromata/releases/tag/Metromata)
+3. Open any command line interface (cli) and navigate to the project (e.g., `cd Metromata`)
+4. Run `npm install -g @angular/cli` to install the Angular cli
+5. Run `npm install` to install all required packages
+6. Run `ng serve --open` to run the application locally
+ 
+Instructions for using the software:
 
-## Code scaffolding
+1. Click and drag over the map to navigate around
+2. Click on any white bus markers to see information on active transit vehicles and what routes they're currently on
+3. Click on any orange bus markers to see information about a stop and the next expected arrival times
+4. On the left navigation bar, click the legend dropdown to show a list for either vehicles or stops
+5. If stops are selected, a list of streets will show up. Clicking on any of the streets will open a list with stops. Stops on the street are labeled by their nearest cross street.
+6. Click on any stop to fly over to it on the map
+7. If vehicles are selected, clicking on any of the vehicles on the list will cause the map to fly over to it.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Development Environment
 
-```bash
-ng generate component component-name
-```
+To recreate the development environment, you need the following software and/or libraries with the specified versions:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+* Angular v21.0.0
+* Angular CLI v21.1.5
+* Bootstrap v5.3.8
+* Leaflet v1.9.4
+* Node.js v22.15.0
+* Papa Parse v5.5.3
+* TypeScript v5.9.2
+* Visual Studio Code v1.109.5
 
-```bash
-ng generate --help
-```
+## Useful Websites to Learn More
 
-## Building
+I found these websites useful in developing this software:
 
-To build the project run:
+* [General Transit Feed Specification Documentation](https://gtfs.org/documentation/overview/)
+* [Leaflet Tutorials](https://leafletjs.com/examples.html)
+* [MARTA Developer Resources](https://itsmarta.com/app-developer-resources.aspx)
 
-```bash
-ng build
-```
+## Future Work
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The following items I plan to fix, improve, and/or add to this project in the future:
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+* [ ] Fix mobile view support as the map is no longer visible on smaller screens
+* [ ] Add vehicle and stop filtering
+* [ ] Add more types of transit such as train and streetcar transportation
